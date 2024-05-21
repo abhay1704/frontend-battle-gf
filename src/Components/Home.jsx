@@ -5,6 +5,7 @@ import NavBar from "./NavBar";
 import Feed from "./Feed";
 import "./Home.css";
 import Network from "./Network";
+import Profile from "./Profile";
 
 const Home = () => {
   return (
@@ -17,7 +18,8 @@ const Home = () => {
       <div className="body">
         <NavBar />
         {/* <Feed /> */}
-        <Network />
+        {/* <Network /> */}
+        <Profile />
       </div>
     </div>
   );
