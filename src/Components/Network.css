@@ -3,10 +3,10 @@
   flex-direction: column;
   text-align: left;
   padding: 0;
-  background-color: var(--md-sys-color-surface-container-high);
   border-radius: 5px;
   gap: 1px;
   font-size: 1.2rem;
+  width: 80%;
   transition: all 0.3s ease-in-out;
 
   .network-nav-item {
@@ -14,6 +14,18 @@
     padding: 15px 20px;
     cursor: pointer;
     border-radius: 2px;
+    background-color: var(--md-sys-color-surface-container-high);
+    position: relative;
+  }
+
+  .network-nav-item .number {
+    position: absolute;
+    height: 100%;
+    right: 20px;
+    top: 0;
+    top: calc(50% - 0.6rem);
+    width: 30px;
+    text-align: right;
   }
 
   .network-icon {
@@ -125,8 +137,32 @@
 #invitations-msg {
   text-transform: uppercase;
   margin-bottom: 50px;
+  font-size: 0.8rem;
+}
+
+.inline {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.inline hr {
+  width: 30%;
+  height: 0;
+  position: relative;
+  top: 0.4rem;
+  color: var(--md-sys-color-on-surface);
 }
 
 button:hover {
   opacity: 0.8;
+}
+
+.network {
+  display: flex;
+  max-width: 100%;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
 }

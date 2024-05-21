@@ -10,11 +10,22 @@ export const NavBar = () => {
   const navtoggleRef = useRef(null);
   const navRef = useRef(null);
 
+  const toggleActive = (e) => {
+    const x = e.target.closest(".nav-link");
+    if (!x) return;
+
+    if (x.classList.contains("active")) return;
+
+    x.parentNode.childNodes.forEach((child) => {
+      child.classList.remove("active");
+    });
+
+    x.classList.add("active");
+  };
+
   useEffect(() => {
     console.log("Use Effect called");
     const handleClick = (event) => {
-      event.stopPropagation();
-      event.preventDefault();
       navRef.current.classList.toggle("nav-close");
     };
 
@@ -37,14 +48,14 @@ export const NavBar = () => {
       <div className="nav-collapse" ref={navtoggleRef}>
         <BsArrowBarLeft />
       </div>
-      <ul>
-        <li className="nav-link active">
+      <ul onClick={toggleActive}>
+        <li className="nav-link">
           <div className="nav-icon">
             <SlFeed />
           </div>
           <div className="nav-text">Feed</div>
         </li>
-        <li className="nav-link">
+        <li className="nav-link active">
           <div className="nav-icon">
             <IoMdGitNetwork />
           </div>

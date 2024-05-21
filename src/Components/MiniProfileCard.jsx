@@ -1,8 +1,8 @@
-import "./Profile.css";
+import "./MiniProfileCard.css";
 import avtar from "../assests/avatar.jpg";
 import bgImage from "../assests/background.jpg";
 
-const Profile = () => {
+const MiniProfileCard = () => {
   return (
     <div className="mini-profile-card">
       <div
@@ -23,4 +23,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default MiniProfileCard;

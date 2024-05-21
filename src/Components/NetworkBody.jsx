@@ -3,22 +3,39 @@ import "./Network.css";
 import avatar from "../assests/avatar.jpg";
 
 const NetworkBody = () => {
+  const toggleActive = (e) => {
+    if (!e.target.closest("button")) return;
+    if (e.target.classList.contains("active")) return;
+
+    e.target.parentNode.childNodes.forEach((child) => {
+      if (child !== e.target) child.classList.remove("active");
+    });
+
+    e.target.classList.add("active");
+  };
+
   return (
     <div className="network-body">
       <div className="invitation">
-        <div className="header">
+        <div className="header" onClick={toggleActive}>
           <button className="received active">RECEIVED</button>
           <button className="sent">SENT</button>
         </div>
 
-        <p id='invitations-msg'>
-          You have 2{" "}
-          <span style={{
-            color: 'var(--md-sys-color-primary)',
-          }}>
-            new invitations
-          </span>
-        </p>
+        <div className="inline">
+          <hr />
+          <p id="invitations-msg">
+            You have 2{" "}
+            <span
+              style={{
+                color: "var(--md-sys-color-primary)",
+              }}
+            >
+              new invitations
+            </span>
+          </p>
+          <hr />
+        </div>
 
         <div className="invitation-body">
           <div className="invitation-card">
