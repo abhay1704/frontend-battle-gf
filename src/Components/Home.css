@@ -1,0 +1,49 @@
+.body {
+  display: flex;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: var(--md-sys-color-surface-container-low);
+  padding: 5px 15px;
+  align-items: center;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-bar {
+  flex: 1;
+}
+
+.main-content {
+  min-width: 60%;
+  min-height: 100vh;
+  flex: 3;
+  padding: 2.3rem;
+}
+
+.rem-section {
+  min-height: 100vh;
+  flex: 2;
+  padding: 2.3rem 0.6rem 0 0;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--md-sys-color-primary);
+}
+
+.sorter {
+  margin-bottom: 2rem;
+}
+
+.mini-profile-card {
+  margin-bottom: 3rem;
+}
+
+.post {
+  margin-bottom: 3rem;
+}

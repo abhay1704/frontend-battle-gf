@@ -1,0 +1,47 @@
+.hashtags-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--md-sys-color-surface-container-high);
+  color: var(--md-sys-color-on-surface);
+  border-radius: 10px;
+  padding: 25px 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: center;
+  margin: auto;
+
+  .card-header {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--md-extended-color-custom-color1-color);
+  }
+
+  .card-body ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    padding: 20px;
+  }
+
+  .card-body li {
+    background-color: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .card-body li::before {
+    content: "#";
+    position: absolute;
+    left: 7px;
+    color: var(--md-sys-color-on-secondary-container);
+  }
+}

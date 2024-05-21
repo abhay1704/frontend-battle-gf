@@ -1,0 +1,132 @@
+.network-nav {
+  display: inline-flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0;
+  background-color: var(--md-sys-color-surface-container-high);
+  border-radius: 5px;
+  gap: 1px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+
+  .network-nav-item {
+    text-align: left;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+
+  .network-icon {
+    margin-right: 20px;
+  }
+
+  .network-nav-item.active {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+  }
+
+  .network-nav-item:hover {
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+  }
+}
+
+.network-body {
+  margin-top: 2rem;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  background-color: var(--md-sys-color-surface);
+
+  .header {
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    height: 90px;
+    background-color: var(--md-sys-color-surface-container-high);
+    margin-bottom: 50px;
+
+    button {
+      background-color: var(--md-sys-color-surface-container-highest);
+      color: var(--md-sys-color-on-surface-container-highest);
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 50%;
+      padding: 10px 15px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    button.active {
+      background-color: var(--md-sys-color-primary);
+      color: var(--md-sys-color-on-primary);
+      padding: 20px 15px;
+    }
+  }
+
+  .invitation-body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    /* box-shadow: 2px -2px 11px var(--md-sys-color-scrim); */
+
+    .invitation-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: var(--md-sys-color-surface-container-high);
+      border-radius: 5px;
+      flex: 1;
+    }
+
+    .invitation-card-header {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .invitation-card img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .about {
+      font-size: 0.8rem;
+      text-align: left;
+    }
+
+    button {
+      background-color: var(--md-sys-color-surface-container-highest);
+      color: var(--md-sys-color-on-surface-container-highest);
+      padding: 10px 30px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    button.accept {
+      background-color: var(--md-sys-color-primary);
+      color: var(--md-sys-color-on-primary);
+    }
+
+    button.reject {
+      background-color: var(--md-sys-color-error);
+      color: var(--md-sys-color-on-error);
+    }
+  }
+}
+
+#invitations-msg {
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
