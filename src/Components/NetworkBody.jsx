@@ -2,9 +2,10 @@ import React from "react";
 import "./Network.css";
 import avatar from "../assests/avatar.jpg";
 
-const NetworkBody = () => {
+const NetworkBody = ({ audio }) => {
   const toggleActive = (e) => {
     if (!e.target.closest("button")) return;
+    audio.play();
     if (e.target.classList.contains("active")) return;
 
     e.target.parentNode.childNodes.forEach((child) => {

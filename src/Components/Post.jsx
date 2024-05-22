@@ -9,9 +9,10 @@ import { useState } from "react";
 import { AiOutlineLike } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 
-const Post = ({ name, postTime, postMessage, url }) => {
+const Post = ({ name, postTime, postMessage, url, audio }) => {
   const [liked, setLiked] = useState(false);
   const toggleLike = () => {
+    audio.play();
     setLiked(!liked);
   };
 
@@ -38,11 +39,21 @@ const Post = ({ name, postTime, postMessage, url }) => {
           <button className="like-button" onClick={toggleLike}>
             {liked ? <AiFillLike /> : <AiOutlineLike />}
           </button>
-          <button className="comment-button">
+          <button
+            className="comment-button"
+            onClick={() => {
+              audio.play();
+            }}
+          >
             <FaCommentAlt />
           </button>
           {/* Share button */}
-          <button className="share-button">
+          <button
+            className="share-button"
+            onClick={() => {
+              audio.play();
+            }}
+          >
             <FaSquareShareNodes />
           </button>
         </div>

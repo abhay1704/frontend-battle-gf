@@ -3,7 +3,7 @@ import { FaVideo, FaPlus } from "react-icons/fa";
 import { MdAddPhotoAlternate, MdEvent } from "react-icons/md";
 import "./CreatePost.css";
 
-const CreatePost = ({ setPostData }) => {
+const CreatePost = ({ setPostData, audioS }) => {
   const [showForm, setShowForm] = useState(false);
 
   const startCreatingPost = function (e) {
@@ -22,7 +22,7 @@ const CreatePost = ({ setPostData }) => {
     console.log(newPost);
 
     setPostData((posts) => [...posts, newPost]);
-
+    audioS.play();
     setShowForm(false);
   };
 

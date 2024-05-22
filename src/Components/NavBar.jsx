@@ -1,5 +1,5 @@
 import { SlFeed } from "react-icons/sl";
-import { IoMdGitNetwork, IoMdNotifications } from "react-icons/io";
+import { IoMdGitNetwork } from "react-icons/io";
 import { MdOutlineWork, MdChatBubble } from "react-icons/md";
 import "./NavBar.css";
 import { BsArrowBarLeft } from "react-icons/bs";
@@ -7,13 +7,14 @@ import { FaUser } from "react-icons/fa";
 
 import { useEffect, useRef } from "react";
 
-export const NavBar = ({ active, setActive }) => {
+export const NavBar = ({ active, setActive, audio }) => {
   const navtoggleRef = useRef(null);
   const navRef = useRef(null);
 
   const toggleActive = (e) => {
     const x = e.target.closest(".nav-link");
     if (!x) return;
+    audio.play();
 
     if (x.classList.contains("active")) return;
 

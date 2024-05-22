@@ -6,10 +6,11 @@ import { FaRegBuilding } from "react-icons/fa6";
 import { RiTeamFill } from "react-icons/ri";
 import { SiPowerpages } from "react-icons/si";
 
-const ConnectionNav = ({ active, setActive }) => {
+const ConnectionNav = ({ active, setActive, audio }) => {
   const toggleActive = (e) => {
     const target = e.target.closest(".network-nav-item");
     if (!target) return;
+    audio.play();
     if (target.classList.contains("active")) return;
 
     target.parentNode.childNodes.forEach((child) => {
