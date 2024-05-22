@@ -184,3 +184,60 @@
 .projects::-webkit-scrollbar {
   display: none; /* For Chrome, Safari and Opera */
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    padding-right: 10px;
+  }
+  .profile-page {
+    padding: 10px;
+    max-width: 85%;
+  }
+
+  .profile-header {
+    flex-direction: column;
+
+    .introduction {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-description {
+    padding: 10px;
+
+    .identifier {
+      flex-direction: column;
+      line-height: 1.5;
+      text-align: left;
+      justify-content: flex-start;
+    }
+
+    button {
+      width: 45%;
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  }
+
+  .experience-item,
+  .education-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  .projects {
+    .project-item {
+      min-width: 200px;
+      width: 300px;
+      height: 200px;
+    }
+  }
+}

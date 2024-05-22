@@ -76,3 +76,53 @@
 .event-icon {
   color: var(--md-sys-color-secondary);
 }
+
+@media screen and (max-width: 768px) {
+  .create-post {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.post-form {
+  width: 100%;
+}
+
+form {
+  background-color: var(--md-sys-color-surface-container-low);
+  color: var(--md-sys-color-surface-on-container-low);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  input,
+  textarea {
+    outline: none;
+    border: 1px solid var(--md-sys-color-outline);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: var(--md-sys-color-secondary);
+    background-color: var(--md-sys-color-surface-container-highest);
+  }
+
+  textarea{
+    height: 200px;
+  };
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: var(--md-sys-color-primary-fixed-dim);
+  }
+}

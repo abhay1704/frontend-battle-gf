@@ -1,0 +1,22 @@
+.error-container {
+  width: 60%;
+  padding: 2rem;
+  border-radius: 10px;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--md-sys-color-error);
+  color: var(--md-sys-color-on-error);
+  position: relative;
+  top: calc(50% - 25vh);
+  max-width: 100%;
+  text-align: center;
+  margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .error-container {
+    position: relative;
+  }
+}

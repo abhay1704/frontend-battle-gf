@@ -31,3 +31,16 @@
   outline: none;
   border: none;
 }
+
+
+@media screen and (max-width: 600px) {
+  .search-input {
+    width: 100px;
+    border-radius: 5px 5px 0 0;
+  }
+
+  .search-btn {
+    border-radius: 0 0 5px 5px;
+    width: 100%;
+  }
+}

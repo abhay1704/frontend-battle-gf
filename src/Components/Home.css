@@ -48,3 +48,28 @@ header {
 .post {
   margin-bottom: 3rem;
 }
+
+@media screen and (max-width: 600px) {
+  .rem-section {
+    max-width: 0;
+    flex: 0;
+    display: none;
+  }
+
+  .body {
+    max-width: 100% !important;
+  }
+
+  .profile-section {
+    flex: 3;
+  }
+
+  header{
+    padding: 10px 7px;
+    font-size: 0.7rem;
+
+    .logo{
+      font-size: 0.8rem;
+    }
+  }
+}

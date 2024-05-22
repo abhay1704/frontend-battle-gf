@@ -87,15 +87,23 @@
   transform: scale(1.2);
 }
 
-.post-dismiss{
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: var(--md-sys-color-error);
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 5px;
-    transition: all 0.5s ease;
+.post-dismiss {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--md-sys-color-error);
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px;
+  transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .post {
+    .post-content {
+      padding: 5px;
+    }
+  }
 }

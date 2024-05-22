@@ -1,5 +1,7 @@
+:root,
 html {
   scroll-behavior: smooth;
+  width: 100% !important;
 }
 
 body {
@@ -10,6 +12,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-size: 0.9rem;
+  width: 100%;
   overflow-x: hidden;
 }
 

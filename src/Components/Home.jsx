@@ -6,8 +6,11 @@ import Feed from "./Feed";
 import "./Home.css";
 import Network from "./Network";
 import Profile from "./Profile";
+import { useState } from "react";
+import Error from "./Error";
 
 const Home = () => {
+  const [active, setActive] = useState("feed");
   return (
     <div className="home">
       <header>
@@ -16,10 +19,13 @@ const Home = () => {
         <div className="toggle">Toggle Theme</div>
       </header>
       <div className="body">
-        <NavBar />
-        {/* <Feed /> */}
-        {/* <Network /> */}
-        <Profile />
+        <NavBar active={active} setActive={setActive} />
+        {active === "feed" && <Feed />}
+        {active === "network" && <Network />}
+        {active === "profile" && <Profile />}
+        {(active === "jobs" || active === "chat" || active === "notices") && (
+          <Error message={"Sorry!! Page not found"} />
+        )}
       </div>
     </div>
   );

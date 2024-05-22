@@ -9,7 +9,7 @@ import { useState } from "react";
 import { AiOutlineLike } from "react-icons/ai";
 import { IoCloseSharp } from "react-icons/io5";
 
-const Post = ({ name, time, postMessage, url }) => {
+const Post = ({ name, postTime, postMessage, url }) => {
   const [liked, setLiked] = useState(false);
   const toggleLike = () => {
     setLiked(!liked);
@@ -27,7 +27,7 @@ const Post = ({ name, time, postMessage, url }) => {
 
           <h3 className="user-name">{name}</h3>
 
-          <p className="post-timestamp">{time}</p>
+          <p className="post-timestamp">{postTime.toLocaleString()}</p>
         </div>
 
         <p className="post-body">{postMessage}</p>

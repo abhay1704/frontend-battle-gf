@@ -36,7 +36,7 @@ const Feed = () => {
   return (
     <Fragment>
       <div className="main-content">
-        <CreatePost />
+        <CreatePost setPostData={setPostData} />
         <Sorter />
         {postData.map((data, i) => {
           return <Post {...data} key={i} />;
